@@ -1,0 +1,19 @@
+Word Jumble
+Rearrange scrambled letters into correct words. Monitors letter/word confusion and phonological awareness.
+Letter Spotting
+Show a fast-moving text with hidden letters (like “find all P’s in a paragraph”). Tests visual scanning and symbol recognition.
+Audio Match
+Play spoken words; user matches them with written form. Identifies phoneme-grapheme mismatches (common in dyslexia).
+Direction Tracker
+Player follows left/right instructions quickly (“Tap left when you hear L, right when you hear R”). Tracks reading-direction challenges.
+Logic Puzzle
+Simple riddles or “which shape doesn’t belong?” tasks. Tests abstract reasoning.
+Reaction Speed
+Press a button when a stimulus appears. Slower-than-average reaction times may indicate neurological decline.
+Number Recall (N-back Game)
+Player recalls if the current number matches the one shown n steps earlier. Excellent for working memory.
+Shape Rotation
+Player rotates 2D/3D shapes to match orientation. Tests spatial reasoning and mental rotation ability.
+
+navigation_maze is not working. 
+will have to look into it 
