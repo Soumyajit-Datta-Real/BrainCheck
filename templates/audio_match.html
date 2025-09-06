@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Match</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='audio_match.js') }}" defer></script>
+</head>
+<body>
+  <div class="game-container">
+    <h1>🔊 Audio Match</h1>
+    <p>Listen to the word, then click the correct written form.</p>
+
+    <button id="play-audio">▶️ Play Word</button>
+
+    <div id="options" class="options-box"></div>
+
+    <p>Score: <span id="score">0</span></p>
+    <button id="new-round">Next Word</button>
+
+    <p id="status"></p>
+  </div>
+</body>
+</html>

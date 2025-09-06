@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attention Warm-up</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-dark font-sans">
+  <div class="container">
+    <h1>Attention Warm-up</h1>
+    <p>Find and click the <strong>red circle</strong> as quickly as possible. Ignore the blue ones. You have 30 seconds!</p>
+    <div id="gameArea" style="width:600px;height:400px;position:relative;margin:auto;background:#111;border:2px solid #444;border-radius:8px;"></div>
+    <p id="timer">Time: 30s</p>
+    <p id="score">Score: 0</p>
+  </div>
+  <script src="{{ url_for('static', filename='attention_warmup.js') }}"></script>
+</body>
+</html>

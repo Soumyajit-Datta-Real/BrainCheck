@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory Match Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Memory Match</h1>
+    <div class="controls">
+      <label for="gridSize">Grid Size:</label>
+      <select id="gridSize">
+        <option value="2">2x2</option>
+        <option value="4" selected>4x4</option>
+        <option value="6">6x6</option>
+      </select>
+      <button id="startBtn">Start Game</button>
+    </div>
+
+    <div class="stats">
+      <p>⏱️ Time: <span id="timer">0</span>s</p>
+      <p>📦 Moves: <span id="moves">0</span></p>
+      <p>✅ Matches: <span id="matches">0</span></p>
+      <p>⭐ Score: <span id="score">0</span></p>
+    </div>
+
+    <div id="board" class="board"></div>
+
+    <h2>Game History</h2>
+    <table id="historyTable">
+      <thead>
+        <tr>
+          <th>#</th><th>Date</th><th>Grid</th><th>Time (s)</th><th>Moves</th><th>Matches</th><th>Score</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <canvas id="scoreChart"></canvas>
+  </div>
+  <script src="{{ url_for('static', filename='memory_match.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Not Ready</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Take a Break</h1>
+    <p>Your Readiness Index is <strong>{{ score }}</strong> (out of 100).</p>
+    <p>It looks like you might be tired or distracted right now. For the most accurate results, we recommend trying again later when you're well-rested and focused.</p>
+    {% if reasons %}
+      <ul>
+        {% for r in reasons %}
+          <li>{{ r }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <a href="{{ url_for('readiness') }}" class="btn">Retry Readiness Check</a>
+  </div>
+</body>
+</html>

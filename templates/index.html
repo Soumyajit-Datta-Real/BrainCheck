@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BrainCheck Hub</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 BrainCheck Cognitive Tests</h1>
+    <p>Test your attention, memory, and cognitive functions through interactive games.</p>
+
+    <div class="menu">
+      <a href="{{ url_for('memory_match') }}" class="btn">Memory Match</a>
+      <a href="{{ url_for('story_recall') }}" class="btn">Story Recall</a>
+      <a href="{{ url_for('pattern_sequence') }}" class="btn">Pattern Sequencing</a>
+      <a href="{{ url_for('navigation_maze') }}" class="btn">Navigation Maze</a>
+      <a href="{{ url_for('word_jumble') }}" class="btn">Word Jumble</a>
+      <a href="{{ url_for('letter_spotting') }}" class="btn">Letter Spotting</a>
+      <a href="{{ url_for('audio_match') }}" class="btn">Audio Match</a>
+      <a href="{{ url_for('direction_tracker') }}" class="btn">Direction Tracker</a>
+      <a href="{{ url_for('logic_puzzle') }}" class="btn">Logic Puzzle</a>
+      <a href="{{ url_for('reaction_speed') }}" class="btn">Reaction Speed</a>
+      <a href="{{ url_for('number_recall') }}" class="btn">Number Recall</a>
+      <a href="{{ url_for('shape_rotation') }}" class="btn">Shape
+      <a href="{{ url_for('results') }}" class="btn">View Results</a>
+    </div>
+  </div>
+</body>
+</html>

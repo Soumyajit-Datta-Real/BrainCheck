@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pattern Sequencing</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Pattern Sequencing</h1>
+    <p class="subtitle">Repeat the sequence of colors. Test your memory and focus!</p>
+
+    <div class="game-board">
+      <div class="pad red" id="red"></div>
+      <div class="pad green" id="green"></div>
+      <div class="pad blue" id="blue"></div>
+      <div class="pad yellow" id="yellow"></div>
+    </div>
+
+    <div class="controls">
+      <button id="startBtn" class="btn">▶ Start Game</button>
+      <button id="restartBtn" class="btn secondary hidden">🔄 Restart</button>
+    </div>
+
+    <div class="score-display">
+      <p>Level: <span id="level">0</span></p>
+    </div>
+
+    <div class="nav">
+      <a href="{{ url_for('home') }}" class="btn secondary">⬅ Back to Home</a>
+      <a href="{{ url_for('results') }}" class="btn">📊 View Results</a>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='pattern_sequence.js') }}"></script>
+</body>
+</html>

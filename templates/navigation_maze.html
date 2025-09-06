@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navigation Maze</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='navigation_maze.js') }}" defer></script>
+</head>
+<body>
+  <div class="game-container">
+    <h1>🧭 Navigation Maze</h1>
+    <p>Watch the path, then retrace it using the arrow buttons.</p>
+
+    <div id="maze-grid"></div>
+
+    <div class="controls">
+      <button onclick="move('up')">⬆️</button><br>
+      <button onclick="move('left')">⬅️</button>
+      <button onclick="move('down')">⬇️</button>
+      <button onclick="move('right')">➡️</button>
+    </div>
+
+    <button id="start-btn">Start Maze</button>
+    <p id="status"></p>
+  </div>
+</body>
+</html>

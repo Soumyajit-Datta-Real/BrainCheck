@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logic Puzzle</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='logic_puzzle.js') }}" defer></script>
+</head>
+<body>
+  <div class="game-container">
+    <h1>🧩 Logic Puzzle</h1>
+    <p>Pick the shape that <b>does not belong</b>.</p>
+
+    <div id="puzzle-box" class="puzzle-box">
+      <!-- Shapes will be dynamically added -->
+    </div>
+
+    <p>Score: <span id="score">0</span></p>
+    <p id="status"></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Story Recall</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    .story-box { max-width: 600px; margin: 2em auto; padding: 1em; border: 1px solid #ccc; border-radius: 8px; }
+    .question-box { max-width: 600px; margin: 2em auto; }
+    .btn { margin: 1em 0; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Story Recall</h1>
+    <div id="storySection" class="story-box">
+      <p>{{ story.text }}</p>
+      <button id="skipToQuestions" class="btn">Skip to Questions</button>
+    </div>
+    <div id="questionsSection" class="question-box hidden">
+      <form id="quizForm">
+        {% for q in story.questions %}
+          <div>
+            <p>{{ q.q }}</p>
+            {% for opt in q.options %}
+              <label>
+                <input type="radio" name="q{{ loop.index }}" value="{{ opt }}"> {{ opt }}
+              </label>
+            {% endfor %}
+          </div>
+        {% endfor %}
+        <button type="button" id="submitQuiz" class="btn">Submit</button>
+      </form>
+    </div>
+    <div id="resultSection" class="hidden">
+      <h2>Your Score: <span id="scoreOut"></span></h2>
+      <a href="{{ url_for('home') }}" class="btn">Back to Home</a>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='story_recall.js') }}"></script>
+</body>
+</html>

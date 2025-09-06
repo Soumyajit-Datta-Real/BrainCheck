@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Word Jumble</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='word_jumble.js') }}" defer></script>
+</head>
+<body>
+  <div class="game-container">
+    <h1>🔡 Word Jumble</h1>
+    <p>Rearrange the letters to form the correct word.</p>
+
+    <div id="jumble-word" class="jumble-box"></div>
+
+    <input type="text" id="user-answer" placeholder="Type your guess here">
+    <button id="submit-btn">Submit</button>
+    <button id="new-word-btn">New Word</button>
+
+    <p id="status"></p>
+  </div>
+</body>
+</html>

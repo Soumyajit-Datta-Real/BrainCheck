@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shape Rotation</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='shape_rotation.js') }}" defer></script>
+</head>
+<body>
+  <div class="game-container">
+    <h1>🔺 Shape Rotation</h1>
+    <p>Rotate the shape until it matches the correct orientation (0°).</p>
+
+    <div id="shape-box" class="shape-box">
+      <canvas id="shapeCanvas" width="200" height="200"></canvas>
+    </div>
+
+    <div class="controls">
+      <button id="rotateLeft">⟲ Rotate Left</button>
+      <button id="rotateRight">⟳ Rotate Right</button>
+      <button id="submitBtn">✅ Submit</button>
+    </div>
+
+    <p>Target Orientation: <b>0°</b></p>
+    <p>Current Rotation: <span id="current-rotation">--</span>°</p>
+    <p>Score: <span id="score">0</span></p>
+    <p>Attempts: <span id="attempts">0</span></p>
+    <p id="status"></p>
+  </div>
+</body>
+</html>

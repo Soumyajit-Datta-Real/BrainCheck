@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Readiness Check</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-dark font-sans">
+  <div class="container">
+    <h1>Before We Begin</h1>
+    <p>Please answer a few quick questions so we can ensure accurate results.</p>
+
+    <form id="readinessForm" action="/submit_readiness" method="POST">
+      <label>How much sleep did you get last night? (hours)</label>
+      <input type="range" name="sleep" min="0" max="9" step="1" value="7" oninput="this.nextElementSibling.value=this.value">
+      <output>7</output>h
+      <br><br>
+
+      <label>Your current mood:</label>
+      <select name="mood">
+        <option value="happy">😊 Happy</option>
+        <option value="neutral">😐 Neutral</option>
+        <option value="sad">☹️ Sad</option>
+      </select>
+      <br><br>
+
+      <label>Had caffeine in the last 2 hours?</label>
+      <input type="radio" name="caffeine" value="yes"> Yes
+      <input type="radio" name="caffeine" value="no" checked> No
+      <br><br>
+
+      <label>Feeling distracted right now?</label>
+      <input type="radio" name="distraction" value="yes"> Yes
+      <input type="radio" name="distraction" value="no" checked> No
+      <br><br>
+
+      <label>Fatigue (1 = fresh, 5 = very tired)</label>
+      <input type="range" name="fatigue" min="1" max="5" value="2" oninput="this.nextElementSibling.value=this.value">
+      <output>2</output>
+      <br><br>
+
+      <button type="submit">Start Testing</button>
+    </form>
+  </div>
+  <script src="{{ url_for('static', filename='readiness.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Direction Tracker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='direction_tracker.js') }}" defer></script>
+</head>
+<body>
+  <div class="game-container">
+    <h1>⬅️➡️ Direction Tracker</h1>
+    <p>Listen carefully! Tap <b>Left</b> when you hear "L", and <b>Right</b> when you hear "R".</p>
+
+    <button id="play-cue">▶️ Play Cue</button>
+
+    <div class="button-box">
+      <button id="left-btn" class="dir-btn">⬅️ Left</button>
+      <button id="right-btn" class="dir-btn">➡️ Right</button>
+    </div>
+
+    <p>Score: <span id="score">0</span></p>
+    <p>Response Time: <span id="reaction">--</span> ms</p>
+    <p id="status"></p>
+  </div>
+</body>
+</html>

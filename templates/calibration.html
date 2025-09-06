@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calibration Test</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg-dark font-sans">
+  <div class="container">
+    <h1>Quick Calibration</h1>
+    <p>Before starting the main tests, let’s check your focus.</p>
+
+    <!-- Reaction Speed -->
+    <div id="reactionTest">
+      <h2>1. Reaction Speed</h2>
+      <p>Click the button as soon as the circle turns green.</p>
+      <div id="dot" style="width:100px;height:100px;background:red;margin:20px auto;border-radius:50%;"></div>
+      <button id="reactionBtn">Start</button>
+      <p id="reactionResult"></p>
+    </div>
+
+    <!-- Memory Recall -->
+    <div id="memoryTest" style="display:none;">
+      <h2>2. Memory Test</h2>
+      <p>Remember the digits shown and enter them when asked.</p>
+      <div id="digits" style="font-size:2em;margin:10px;"></div>
+      <input type="text" id="memoryInput" placeholder="Enter digits" />
+      <button id="memorySubmit">Submit</button>
+      <p id="memoryResult"></p>
+    </div>
+
+    <!-- Hidden form to send results -->
+    <form id="calibrationForm" action="/submit_calibration" method="POST" style="display:none;">
+      <input type="hidden" name="reaction_time" id="reactionTimeField">
+      <input type="hidden" name="memory_correct" id="memoryCorrectField">
+    </form>
+  </div>
+  <script src="{{ url_for('static', filename='calibration.js') }}"></script>
+</body>
+</html>

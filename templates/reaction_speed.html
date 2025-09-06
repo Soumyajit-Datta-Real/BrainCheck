@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reaction Speed</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='reaction_speed.js') }}" defer></script>
+</head>
+<body>
+  <div class="game-container">
+    <h1>⚡ Reaction Speed</h1>
+    <p>Press the button <b>as soon as it turns green</b>!</p>
+
+    <div id="reaction-box" class="reaction-box">
+      <button id="reaction-btn" disabled>Wait...</button>
+    </div>
+
+    <p>Reaction Time: <span id="reaction-time">--</span> ms</p>
+    <p>Best: <span id="best-time">--</span> ms</p>
+    <p id="status"></p>
+  </div>
+</body>
+</html>

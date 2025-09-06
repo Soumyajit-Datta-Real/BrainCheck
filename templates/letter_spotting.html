@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Letter Spotting</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='letter_spotting.js') }}" defer></script>
+</head>
+<body>
+  <div class="game-container">
+    <h1>🔎 Letter Spotting</h1>
+    <p>Find and click all the target letters before time runs out!</p>
+    
+    <p>Target Letter: <strong id="target-letter">P</strong></p>
+    <div id="text-area" class="letter-box"></div>
+
+    <p>Time Left: <span id="timer">20</span> seconds</p>
+    <p>Score: <span id="score">0</span></p>
+
+    <button id="start-btn">Start Game</button>
+    <p id="status"></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Number Recall (N-back)</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='number_recall.js') }}" defer></script>
+</head>
+<body>
+  <div class="game-container">
+    <h1>🔢 Number Recall (N-back)</h1>
+    <p>Press <b>SPACE</b> if the number matches the one shown <span id="n-back-val">2</span> steps ago.</p>
+
+    <div id="number-display" class="number-display">--</div>
+
+    <div class="controls">
+      <label for="nSelect">N-back: </label>
+      <select id="nSelect">
+        <option value="2" selected>2-back</option>
+        <option value="3">3-back</option>
+        <option value="4">4-back</option>
+      </select>
+      <button id="startBtn">▶ Start</button>
+    </div>
+
+    <p>Score: <span id="score">0</span></p>
+    <p>Attempts: <span id="attempts">0</span></p>
+    <p id="status"></p>
+  </div>
+</body>
+</html>
+
